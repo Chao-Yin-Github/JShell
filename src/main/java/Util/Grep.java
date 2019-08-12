@@ -19,7 +19,7 @@ public class Grep {
             // TODO 同echo,无法解决"匹配问题
             String[] subString = array[1].split("\"");
             StringBuilder subStringBuilder = new StringBuilder();
-            for(String sub:subString){
+            for (String sub : subString) {
                 subStringBuilder.append(sub);
             }
             while ((line = bufferedReader.readLine()) != null) {

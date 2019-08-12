@@ -29,22 +29,18 @@ public class Cd {
         String origianlPath = Pwd.getAddressPath();
 
         //特判cd /
-        if(array[1].length()==1&&array[1].startsWith("/")){
+        if (array[1].length() == 1 && array[1].startsWith("/")) {
             Pwd.changeAddressPath("/");
             return;
         }
 
         // 预处理绝对路径情况
-        if(array[1].startsWith("/")){
+        if (array[1].startsWith("/")) {
             Pwd.changeAddressPath("/");
         }
 
         for (String arg : args) {
             file = new File(Pwd.getAbsoluteAddress(arg));
-            if("".equals(arg)){
-//                System.out.println(arg);
-//                continue;
-            }
             if (file.isDirectory()) {
                 if ("..".equals(arg)) {
                     Pwd.changeAddressPath(Pwd.previousPath());
@@ -55,7 +51,7 @@ public class Cd {
                 System.out.println("cd: 没有那个目录: " + arg);
                 // 将修改过的改回原路径
                 Pwd.changeAddressPath(origianlPath);
-                return ;
+                return;
             }
         }
     }

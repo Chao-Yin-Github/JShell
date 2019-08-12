@@ -26,8 +26,8 @@ public class Ls {
         if ("" != path) {
             System.out.println(path + ":");
         }
-        if(fileList==null){
-            return ;
+        if (fileList == null) {
+            return;
         }
         for (String file : fileList) {
             System.out.print(file + "    ");

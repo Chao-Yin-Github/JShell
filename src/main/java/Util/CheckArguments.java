@@ -12,9 +12,9 @@ public class CheckArguments {
         if (array.length > n) {
             throw new ArgumentsException(array[0] + ":too many arguments");
         } else if (array.length < n) {
-            try{
+            try {
                 throw new ArgumentsException(array[0] + ": 缺少操作数");
-            }catch (ArrayIndexOutOfBoundsException e){
+            } catch (ArrayIndexOutOfBoundsException e) {
                 throw new ArrayIndexOutOfBoundsException();
             }
         }
