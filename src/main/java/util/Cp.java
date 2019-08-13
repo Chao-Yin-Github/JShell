@@ -1,6 +1,6 @@
-package Util;
+package util;
 
-import Exception.ArgumentsException;
+import exception.ArgumentsException;
 
 import java.io.File;
 import java.io.IOException;

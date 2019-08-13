@@ -1,8 +1,8 @@
-package Util;
+package util;
 
 import java.io.File;
 
-import Exception.ArgumentsException;
+import exception.ArgumentsException;
 
 /**
  * @author yinchao

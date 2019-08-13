@@ -1,4 +1,4 @@
-import Util.*;
+import util.*;
 
 /**
  * @author Yinchao
@@ -29,7 +29,7 @@ public class Jshell {
                     Grep.grepString(array);
                     break;
                 case "pwd":
-                    // TODO 这个判断放到这里其实很突兀,但是一时我也不知道怎么解决,站坑先
+                    // TODO 这个判断放到这里其实很突兀,但是一时我也不知道怎么解决,占坑先
                     if (array.length != 1) {
                         System.out.println("pwd: too many arguments");
                         continue;

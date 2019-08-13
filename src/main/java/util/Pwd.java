@@ -1,4 +1,4 @@
-package Util;
+package util;
 
 /**
  * @author yinchao
@@ -7,7 +7,9 @@ package Util;
 public class Pwd {
 
     // shell自己维护工作路径
-    // FIXME 突然想到用static有一点不太好:开启两个shell,第二个shell路径初始化会改变第一个shell的路径,会混乱掉
+    /**
+     * FIXME 突然想到用static有一点不太好:开启两个shell,第二个shell路径初始化会改变第一个shell的路径,会混乱掉
+     * */
     private static String AddressPath;
 
     /**
@@ -61,6 +63,8 @@ public class Pwd {
     public static String previousPath() {
         if (AddressPath.lastIndexOf("/") != AddressPath.indexOf("/")) {
             return AddressPath.substring(0, AddressPath.lastIndexOf("/"));
-        } else return AddressPath;
+        } else {
+            return AddressPath;
+        }
     }
 }
