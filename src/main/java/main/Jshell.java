@@ -1,3 +1,5 @@
+package main;
+
 import util.*;
 
 /**
@@ -6,6 +8,11 @@ import util.*;
  */
 public class Jshell {
 
+    /**
+     * shell 程序入口
+     *
+     * @param args JShell
+     */
     public static void main(String[] args) {
         String input = null;
         Pwd.init();
@@ -15,9 +22,7 @@ public class Jshell {
             if ("".equals(input)) {
                 continue;
             }
-
             String[] array = input.split(" ");
-
             switch (array[0]) {
                 case "hello":
                     Echo.echo(input, 6);

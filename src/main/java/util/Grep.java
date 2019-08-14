@@ -1,19 +1,27 @@
 package util;
 
-import java.io.*;
-
 import exception.ArgumentsException;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author yinchao
+ * @version 1.0
  * @date 2019/8/12 10:18
  */
 public class Grep {
+    /**
+     * grep [substring] [fileName] 从fileName中过滤所有的行
+     * <p>FIXME 此处仅仅是过滤，而非正则表达式，后续优化</p>
+     *
+     * @param array grep [substring] [fileName]
+     */
     public static void grepString(String[] array) {
         try {
             CheckArguments.check(array, 3);
             FileInputStream fileInputStream = new FileInputStream(Pwd.getAbsoluteAddress(array[2]));
-            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, StandardCharsets.UTF_8);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String line = "";
             // TODO 同echo,无法解决"匹配问题

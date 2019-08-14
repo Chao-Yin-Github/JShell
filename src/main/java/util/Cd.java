@@ -1,18 +1,25 @@
 package util;
 
-import java.io.File;
-
 import exception.ArgumentsException;
+
+import java.io.File;
 
 /**
  * @author yinchao
  * @date 2019/8/12 10:32
- * @discription: 调用System.setProperty(" user.dir ", " xxx ")修改user.dir后，
- * 能影响java.io.File和java.nio.file.Path的后续创建，
- * 但不会影响java.io.FileOutputStream、java.lang.Process等，
- * 即写入文件、子进程等当前目录还是进程启动时的目录，不会随系统属性的修改而修改。
  */
 public class Cd {
+    /**
+     * cd [destination] 跳转到目标路径
+     * <p>注意，调用System.setProperty(" user.dir ", " xxx ")修改user.dir后，
+     * 能影响java.io.File和java.nio.file.Path的后续创建，
+     * 但不会影响java.io.FileOutputStream、java.lang.Process等，
+     * 即写入文件、子进程等当前目录还是进程启动时的目录，不会随系统属性的修改而修改。</p>
+     * <p>所以，使用util中的{@link util.Pwd}进行维护工作路径</p>
+     *
+     * @param array cd [destination]
+     */
+
     public static void main(String[] array) {
         try {
             CheckArguments.check(array, 2);

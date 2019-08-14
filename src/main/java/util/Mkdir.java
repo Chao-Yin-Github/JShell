@@ -1,14 +1,20 @@
 package util;
 
-import java.io.File;
-
 import exception.ArgumentsException;
+
+import java.io.File;
 
 /**
  * @author yinchao
  * @date 2019/8/12 10:24
  */
 public class Mkdir {
+    /**
+     * mkdir [directoryName1,directoryName2,......]
+     * <p>创建新的文件夹，参数个数任意</p>
+     *
+     * @param array mkdir [directoryName1,directoryName2,......]
+     */
     public static void main(String[] array) {
 
         // 有参数即可循环创建

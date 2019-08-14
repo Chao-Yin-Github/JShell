@@ -2,9 +2,17 @@ package util;
 
 /**
  * @author yinchao
+ * @version 1.0
  * @date 2019/8/12 10:04
  */
 public class Echo {
+    /**
+     * echo [string] 输出string，后可接[|grep substring]，这将输出所有包含substring的行。
+     * <p>FIXME 并未使用管道，后续优化</p>
+     *
+     * @param input 用户输入
+     * @param n     命令可能是echo或者是hello，把前面的头部截取
+     */
     public static void echo(String input, Integer n) {
         String[] commands = input.split("\\|");
         commands[0] = commands[0].substring(n);

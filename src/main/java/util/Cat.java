@@ -2,13 +2,21 @@ package util;
 
 import exception.ArgumentsException;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * @author yinchao
  * @date 2019/8/12 10:33
  */
 public class Cat {
+    /**
+     * cat [fileName] 输出文本文件
+     *
+     * @param array cat [fileName]
+     */
     public static void main(String[] array) {
         try {
             CheckArguments.check(array, 2);
@@ -33,7 +41,6 @@ public class Cat {
             }
         } catch (IOException e) {
             System.out.println("IOException!!!");
-            return;
         }
     }
 }

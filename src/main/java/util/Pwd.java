@@ -1,21 +1,27 @@
 package util;
 
 /**
+ * <p>用于本shell自己维护工作路径的类</p>
+ * <p>
+ * FIXME 使用static String 存储路径，不是线程安全的，开启多个shell可能会出现问题。
+ * </p>
+ *
  * @author yinchao
  * @date 2019/8/12 10:20
  */
 public class Pwd {
 
-    // shell自己维护工作路径
+    //
     /**
+     * <p>shell自己维护工作路径</p>
      * FIXME 突然想到用static有一点不太好:开启两个shell,第二个shell路径初始化会改变第一个shell的路径,会混乱掉
-     * */
+     */
     private static String AddressPath;
 
     /**
-     * 无参,获得当前工作路径
+     * 无参
      *
-     * @return
+     * @return 返回当前工作路径
      */
     public static String getAddressPath() {
         return AddressPath;
@@ -29,36 +35,38 @@ public class Pwd {
     }
 
     /**
-     * cd命令调用,改变当前路径,处理得到绝对路径
+     * 改变当前路径,并处理得到绝对路径
      *
-     * @param str fileName
-     * @return
+     * @param fileName （前面可能有文件路径）文件名
+     * @return 返回文件的绝对路径
      */
-    public static String changeAddressPath(String str) {
-        AddressPath = getAbsoluteAddress(str);
+    public static String changeAddressPath(String fileName) {
+        AddressPath = getAbsoluteAddress(fileName);
         return AddressPath;
     }
 
     /**
      * 获取到传入文件的绝对路径,与第一个命令不同之处在于前者没有参数,后者有参数
      *
-     * @param str 文件名
-     * @return
+     * @param fileName (前面可能有文件路径)文件名
+     * @return 返回出入文件的绝对路径
      */
-    public static String getAbsoluteAddress(String str) {
-        if (str.startsWith("/")) {
-            return str;
+    public static String getAbsoluteAddress(String fileName) {
+        if (fileName.startsWith("/")) {
+            return fileName;
         } else {
             if (AddressPath.length() == 1) {
-                return AddressPath + str;
+                return AddressPath + fileName;
             } else {
-                return AddressPath + "/" + str;
+                return AddressPath + "/" + fileName;
             }
         }
     }
 
     /**
-     * cd .. 命令调用,得到父级文件夹
+     * cd .. 命令调用
+     *
+     * @return 父级文件夹
      */
     public static String previousPath() {
         if (AddressPath.lastIndexOf("/") != AddressPath.indexOf("/")) {

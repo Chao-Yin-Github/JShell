@@ -8,9 +8,21 @@ import java.nio.file.Files;
 
 /**
  * @author yinchao
+ * @version 1.0
  * @date 2019/8/12 19:04
  */
 public class Cp {
+    /**
+     * cp [source] [destination] 把文件从source复制到destination
+     * <p>
+     * FIXME 没有考虑到非文本文件的问题
+     * </p>
+     * <p>
+     * TODO 后续加入-r命令，使其可以复制文件夹。
+     * </p>
+     *
+     * @param array cp [source] [destination]
+     */
     public static void main(String[] array) {
 
         try {
