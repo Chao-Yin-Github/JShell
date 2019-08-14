@@ -6,7 +6,7 @@ import java.io.File;
 
 /**
  * @author yinchao
- * @date 2019/8/12 10:24
+ * @Date 2019/8/12 10:24
  */
 public class Mkdir {
     /**

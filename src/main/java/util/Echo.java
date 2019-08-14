@@ -3,7 +3,7 @@ package util;
 /**
  * @author yinchao
  * @version 1.0
- * @date 2019/8/12 10:04
+ * @Date 2019/8/12 10:04
  */
 public class Echo {
     /**

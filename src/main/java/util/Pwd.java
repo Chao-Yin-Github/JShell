@@ -7,7 +7,7 @@ package util;
  * </p>
  *
  * @author yinchao
- * @date 2019/8/12 10:20
+ * @Date 2019/8/12 10:20
  */
 public class Pwd {
 

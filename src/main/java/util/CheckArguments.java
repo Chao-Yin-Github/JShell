@@ -4,7 +4,7 @@ import exception.ArgumentsException;
 
 /**
  * @author yinchao
- * @date 2019/8/12 10:57
+ * @Date 2019/8/12 10:57
  */
 public class CheckArguments {
 

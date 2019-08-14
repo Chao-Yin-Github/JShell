@@ -4,7 +4,7 @@ import java.io.File;
 
 /**
  * @author yinchao
- * @date 2019/8/12 10:22
+ * @Date 2019/8/12 10:22
  */
 public class Ls {
     /**
