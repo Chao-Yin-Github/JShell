@@ -15,7 +15,7 @@
 
 		grep “hello” file，检查file文件里每一行，将开头是hello的行打印出来。
 
-	- echo “test\nstring\nfor\ngrep" |grep "string"。
+	- echo “test\nstring\nfor\ngrep” |grep "string"。
 		这条语句将echo 后面的字符串打印内容作为grep的输入参数，会打印输出含有string的行
 
 3. 第三周(输入输出流，文件操作)[选做]

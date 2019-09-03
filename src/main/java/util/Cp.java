@@ -29,6 +29,7 @@ public class Cp {
             CheckArguments.check(array, 3);
         } catch (ArgumentsException e) {
             System.out.println(e.getMessage());
+            return ;
         }
 
         File file = new File(Pwd.getAbsoluteAddress(array[1]));

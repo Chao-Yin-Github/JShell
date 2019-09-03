@@ -15,6 +15,7 @@ public class Pwd {
     /**
      * <p>shell自己维护工作路径</p>
      * FIXME 突然想到用static有一点不太好:开启两个shell,第二个shell路径初始化会改变第一个shell的路径,会混乱掉
+     * 根本就不会好吧！！！static根本就不会重复初始化</(=-"-=)>
      */
     private static String AddressPath;
 

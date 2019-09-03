@@ -14,7 +14,12 @@ public class Jshell {
      * @param args JShell
      */
     public static void main(String[] args) {
-        String input = null;
+        Jshell jshell = new Jshell();
+        jshell.start();
+    }
+
+    public void start(){
+        String input;
         Pwd.init();
         while (true) {
             input = GetInput.get();
