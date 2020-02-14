@@ -1,5 +1,7 @@
 package util;
 
+import extension.pwd;
+
 import java.util.Scanner;
 
 /**
@@ -15,12 +17,11 @@ public class GetInput {
      * @return 用户输入的字符串
      */
     public static String get() {
-        System.out.print("JShell>>" + Pwd.getAddressPath() + ">>");
+        System.out.print("JShell>>" + pwd.getAddressPath() + ">>");
         StringBuilder inputBuilder = new StringBuilder();
         Scanner in = new Scanner(System.in);
-        in.useDelimiter("\n");
         if (in.hasNextLine()) {
-            inputBuilder.append(in.next());
+            inputBuilder.append(in.nextLine());
         }
         String input = inputBuilder.toString();
         input = input.trim();

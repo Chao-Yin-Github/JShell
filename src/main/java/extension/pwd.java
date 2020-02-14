@@ -1,23 +1,25 @@
-package util;
+package extension;
+
+import exception.ArgumentsException;
+import util.CheckArguments;
+import util.RawApplication;
 
 /**
  * <p>用于本shell自己维护工作路径的类</p>
  * <p>
- * FIXME 使用static String 存储路径，不是线程安全的，开启多个shell可能会出现问题。
  * </p>
  *
  * @author yinchao
  * @Date 2019/8/12 10:20
  */
-public class Pwd {
+public class pwd implements RawApplication {
 
     //
     /**
      * <p>shell自己维护工作路径</p>
-     * FIXME 突然想到用static有一点不太好:开启两个shell,第二个shell路径初始化会改变第一个shell的路径,会混乱掉
-     * 根本就不会好吧！！！static根本就不会重复初始化</(=-"-=)>
+     * static根本就不会重复初始化</(=-"-=)>
      */
-    private static String AddressPath;
+    private static String addressPath;
 
     /**
      * 无参
@@ -25,14 +27,14 @@ public class Pwd {
      * @return 返回当前工作路径
      */
     public static String getAddressPath() {
-        return AddressPath;
+        return addressPath;
     }
 
     /**
      * 通过property初始化,当且仅当shell初始化时调用一次
      */
     public static void init() {
-        AddressPath = System.getProperty("user.dir");
+        addressPath = System.getProperty("user.dir");
     }
 
     /**
@@ -42,8 +44,8 @@ public class Pwd {
      * @return 返回文件的绝对路径
      */
     public static String changeAddressPath(String fileName) {
-        AddressPath = getAbsoluteAddress(fileName);
-        return AddressPath;
+        addressPath = getAbsoluteAddress(fileName);
+        return addressPath;
     }
 
     /**
@@ -56,10 +58,10 @@ public class Pwd {
         if (fileName.startsWith("/")) {
             return fileName;
         } else {
-            if (AddressPath.length() == 1) {
-                return AddressPath + fileName;
+            if (addressPath.length() == 1) {
+                return addressPath + fileName;
             } else {
-                return AddressPath + "/" + fileName;
+                return addressPath + "/" + fileName;
             }
         }
     }
@@ -70,10 +72,21 @@ public class Pwd {
      * @return 父级文件夹
      */
     public static String previousPath() {
-        if (AddressPath.lastIndexOf("/") != AddressPath.indexOf("/")) {
-            return AddressPath.substring(0, AddressPath.lastIndexOf("/"));
+        if (addressPath.lastIndexOf("/") != addressPath.indexOf("/")) {
+            System.out.println("previous path is " + addressPath.substring(0, addressPath.lastIndexOf('/')));
+            return addressPath.substring(0, addressPath.lastIndexOf("/"));
         } else {
-            return AddressPath;
+            return "/";
+        }
+    }
+
+    @Override
+    public void main(String input) {
+        try {
+            CheckArguments.check(input.split(" "), 1);
+            System.out.println(getAddressPath());
+        } catch (ArgumentsException e) {
+            e.getMessage();
         }
     }
 }

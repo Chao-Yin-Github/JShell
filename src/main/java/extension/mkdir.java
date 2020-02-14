@@ -1,6 +1,8 @@
-package util;
+package extension;
 
 import exception.ArgumentsException;
+import util.CheckArguments;
+import util.RawApplication;
 
 import java.io.File;
 
@@ -8,15 +10,16 @@ import java.io.File;
  * @author yinchao
  * @Date 2019/8/12 10:24
  */
-public class Mkdir {
+public class mkdir implements RawApplication {
     /**
      * mkdir [directoryName1,directoryName2,......]
      * <p>创建新的文件夹，参数个数任意</p>
      *
-     * @param array mkdir [directoryName1,directoryName2,......]
+     * @param input mkdir [directoryName1,directoryName2,......]
      */
-    public static void main(String[] array) {
-
+    @Override
+    public void main(String input) {
+        String[] array = input.split(" ");
         // 有参数即可循环创建
         try {
             CheckArguments.check(array, 2);
@@ -26,7 +29,7 @@ public class Mkdir {
         }
 
         for (int i = 1; i < array.length; i++) {
-            File file = new File(Pwd.getAbsoluteAddress(array[i]));
+            File file = new File(pwd.getAbsoluteAddress(array[i]));
             if (file.exists()) {
                 System.out.println("mkdir:无法创建目录 " + "\"" + array[i] + "\":文件已存在");
             } else {
