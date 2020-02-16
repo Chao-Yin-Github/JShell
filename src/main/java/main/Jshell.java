@@ -24,20 +24,24 @@ public class Jshell {
         String input;
         pwd.init();
         while (true) {
+            // 获取输入
             input = GetInput.get();
 
             if (input.isEmpty()) {
                 continue;
             }
+
             String[] array = input.split(" ");
 
             RawApplication raw = null;
             try {
+                // 通过反射,使用字符串动态生成实例对象
                 raw = (RawApplication) Class.forName("extension." + array[0]).newInstance();
             } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
                 System.out.println("JShell: command not found: " + array[0]);
                 continue;
             }
+            // 调用统一的方法
             raw.main(input);
         }
     }

@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class GetInput {
     /**
      * 获取用户输入的字符串
-     * <p>FixMe 没有完全处理转移字符的问题，只是简单处理了一下\n</p>
+     * <p>FixMe 没有完全处理转义字符的问题，只是简单处理了一下\n</p>
      *
      * @return 用户输入的字符串
      */
