@@ -7,7 +7,7 @@ A self-made shell command , written by Java.
 <a href="https://img.shields.io/badge/tools-shell-darkgrey?sytle=plastic"><img src="https://img.shields.io/badge/tools-shell-darkgrey?sytle=plastic"></a>
 <a href="https://img.shields.io/badge/Platform-Manjaro 19.0.1 Kyria-blue?sytle=plastic"><img src="https://img.shields.io/badge/Platform-Manjaro 19.0.1 Kyria-blue?sytle=plastic"></a>
 <a href="http://47.100.76.82"><img src="https://img.shields.io/badge/blog-yc-yellow?sytle=plastic"></a>
-<a href=""><img src="https://img.shields.io/badge/contact me-yinchao.mail@foxmail.com-brightgreen?sytle=plastic"></a>
+<a href="mailto:yinchao.mail@foxmail.com"><img src="https://img.shields.io/badge/contact me-yinchao.mail@foxmail.com-brightgreen?sytle=plastic"></a>
 </p>
 
 ---
