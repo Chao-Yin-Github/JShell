@@ -3,11 +3,11 @@
 A self-made shell command , written by Java.
 
 <p align="center">
-<a href="https://img.shields.io/badge/Java-v1.8.0-red?style=plastic"><img src="https://img.shields.io/badge/Java-v1.8.0-red?sytle=plastic"></a>
-<a href="https://img.shields.io/badge/tools-shell-darkgrey?sytle=plastic"><img src="https://img.shields.io/badge/tools-shell-darkgrey?sytle=plastic"></a>
-<a href="https://img.shields.io/badge/Platform-Manjaro 19.0.1 Kyria-blue?sytle=plastic"><img src="https://img.shields.io/badge/Platform-Manjaro 19.0.1 Kyria-blue?sytle=plastic"></a>
-<a href="http://47.100.76.82"><img src="https://img.shields.io/badge/blog-yc-yellow?sytle=plastic"></a>
-<a href="mailto:yinchao.mail@foxmail.com"><img src="https://img.shields.io/badge/contact me-yinchao.mail@foxmail.com-brightgreen?sytle=plastic"></a>
+<a href="https://img.shields.io/badge/Java-v1.8.0-red?style=plastic"><img src="https://img.shields.io/badge/Java-v1.8.0-red?style=plastic"></a>
+<a href="https://img.shields.io/badge/tools-shell-darkgrey?style=plastic"><img src="https://img.shields.io/badge/tools-shell-darkgrey?style=plastic"></a>
+<a href="https://img.shields.io/badge/Platform-Manjaro 19.0.1 Kyria-blue?style=plastic"><img src="https://img.shields.io/badge/Platform-Manjaro 19.0.1 Kyria-blue?style=plastic"></a>
+<a href="http://47.100.76.82"><img src="https://img.shields.io/badge/blog-yc-yellow?style=plastic"></a>
+<a href="mailto:yinchao.mail@foxmail.com"><img src="https://img.shields.io/badge/contact me-yinchao.mail@foxmail.com-brightgreen?style=plastic"></a>
 </p>
 
 ---
@@ -81,5 +81,5 @@ A self-made shell command , written by Java.
 
     也可以简单的理解在 Java 的正则表达式中，两个`\\`代表其他语言中的一个`\`，这也就是为什么表示一位数字的正则表达式是 `\\d`，而表示一个普通的反斜杠是 `\\\\`。
 
-## License
+## LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">JShell</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/Chao-Yin-Github/JShell" property="cc:attributionName" rel="cc:attributionURL">https://github.com/Chao-Yin-Github/JShell</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
